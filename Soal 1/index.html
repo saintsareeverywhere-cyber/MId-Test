@@ -22,25 +22,6 @@
                     <button type="login">Login</button>
              </form>
         </div>
-        
-        <script>
-            const form=document.querySelector('form');
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Mencegah form submit secara default
-
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
-
-                // Validasi sederhana
-                if (username === 'admin' && password === 'admin123') {
-                    alert('Login berhasil\nUsername: ' + username + '\nPassword: ' + password);
-                } else {
-                    alert('Login gagal');
-                }
-            });
-        </script>
-        
-    </div>
     
 </body>
 </html>

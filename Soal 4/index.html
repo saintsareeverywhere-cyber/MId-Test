@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <form>
+                <h1>Login</h1>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="Masukkan Username" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Masukkan Password" id="password" name="password" required>
+                    </div>
+                    <button type="login">Login</button>
+             </form>
+        </div>
+        <script>
+            const form=document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Mencegah form submit secara default
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Validasi sederhana
+                if (username === 'admin' && password === 'admin123') {
+                    alert('Login berhasil');
+                } else {
+                    alert('Login gagal');
+                }
+            });
+        </script>
+    
+</body>
+</html>
